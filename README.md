@@ -33,7 +33,7 @@ Implementation of the string.h library with additions.
 ### sprintfSpecifiers
 
 | No. | Specifier | sprintf output
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | 1 | c | Character |
 | 2 | d | Signed decimal integer |
 | 3 | i | Signed decimal integer |
