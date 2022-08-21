@@ -1,5 +1,5 @@
-#ifndef SRC_S21_STRING_H_
-#define SRC_S21_STRING_H_
+#ifndef SRC_STRING_H_
+#define SRC_STRING_H_
 
 #include <stdarg.h>
 #include <stdlib.h>
@@ -321,4 +321,4 @@ int isspecif(char c);
                 "Operation not possible due to RF-kill", \
                 "Memory page has hardware error"}
 #endif
-#endif  // SRC_S21_STRING_H_
+#endif  // SRC_STRING_H_
