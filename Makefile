@@ -4,9 +4,9 @@ all: clean test
 
 re: clean all 
 
-test: s21_string.a clean_obj
-	gcc $(WWW) -l check unit_tests.c s21_string.a -o s21_test
-	./s21_test
+test: string.a clean_obj
+	gcc $(WWW) -l check unit_tests.c string.a -o test
+	./test
 
 gcov_report: gcov_report_build
 	rm -rf *.gcda
@@ -14,16 +14,16 @@ gcov_report: gcov_report_build
 	rm -rf *.info
 
 gcov_report_build:
-	gcc $(WWW) --coverage -l check unit_tests.c s21_sprintf.c s21_string.c -o gcov_report
+	gcc $(WWW) --coverage -l check unit_tests.c sprintf.c string.c -o gcov_report
 	./gcov_report
 	lcov -t "./gcov_report" -o gcov_report.info -c -d .
 	genhtml -o report gcov_report.info
 
-s21_string.a: build_s21_string clean_obj
+string.a: build_string clean_obj
 
-build_s21_string:
-	gcc $(WWW) -c s21_sprintf.c s21_string.c
-	ar rc s21_string.a *.o
+build_string:
+	gcc $(WWW) -c sprintf.c string.c
+	ar rc string.a *.o
 
 install_brew:
 	cd ~
@@ -44,4 +44,4 @@ clean_test:
 	@(rm -rf report)
 
 clean: clean_lib clean_lib clean_test clean_obj
-	@(rm -rf s21_test)
+	@(rm -rf test)
