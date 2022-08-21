@@ -1,4 +1,4 @@
-#include "./s21_string.h"
+#include "./string.h"
 
 static char specif[16] = "cdifsuxXgGeEopn%";
 
