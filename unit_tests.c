@@ -3,7 +3,7 @@
 #include <wchar.h>
 #include <string.h>
 
-#include "s21_string.h"
+#include "string.h"
 
 int s21_sprintf(char *str, const char *format, ...);
 
