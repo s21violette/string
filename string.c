@@ -1,4 +1,4 @@
-#include "./s21_string.h"
+#include "./string.h"
 
 void *s21_memchr(const void *ptr, int c, s21_size_t count) {
     s21_size_t i = 0;
